@@ -1,0 +1,38 @@
+<?php
+class AppConfig
+{
+    const APP_VERSION = 'GIT_VERSION';
+    const MAX_FILE_SIZE = 1024 * 1024 * 1024; // 1024MB
+    const APP_NAME = "Cool Upload service";
+
+    const NEXTCLOUD = [
+        'DOMAIN' => '..........',
+        'FOLDER' => 'uploads',
+        'USERNAME' => '...........',
+        'PASSWORD' => '.............'
+    ]; // Closing bracket for NEXTCLOUD array
+
+    const EMAIL_SMTP = [
+        'HOST' => '............',
+        'PORT' => 587,
+        'ENCRYPTION' => 'tls',
+        'FROM_NAME' => 'Manager of upload service',
+        'FROM_EMAIL' => '............',
+        'REPLYTO_EMAIL' => '............',
+        'USERNAME' => '............',
+        'PASSWORD' => '............'
+    ]; // Closing bracket for EMAIL_SMTP array
+
+    const REDIS_DB = [
+        'HOST' => 'localhost',
+        'PORT' => 6379
+    ]; // Closing bracket for REDIS_DB array
+
+    const SECURITY = [
+        'HCAPTCHA_SITEKEY' => '............',
+        'HCAPTCHA_SECRET' => '............',
+        'CSRF_SECRET' => '...............',
+        'ACCESS_TOKEN_WAIT' => 48 * 60 * 60, // 48 hours
+        'ACCESS_TOKEN_EXPIRE' => 1 * 60 * 60 // 1 hour
+    ]; // Closing bracket for SECURITY array
+}

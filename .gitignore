@@ -478,3 +478,4 @@ composer.lock
 !.gitignore
 
 config/.config.php
+!config/.config.php.default
