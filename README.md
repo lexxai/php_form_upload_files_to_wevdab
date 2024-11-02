@@ -1,5 +1,33 @@
-# Form for Uploading a File to WebDAV in PHP.
-## Transfer web files to NextCloud storage
+# Project: Secure Temporary File Upload Service
+
+This project provides a secure, temporary file-upload service with time-limited access. It generates a unique URL for file uploads, includes CAPTCHA protection, and sends the URL to the user via email. The following is a list of key functionalities and features implemented in this project.
+
+## Key Features
+
+1. **Secure URL Registration**  
+   - Generates a unique URL for each request.
+   - Protects URL generation with CAPTCHA to prevent abuse.
+
+2. **Time-Limited URL Access**  
+   - URL expires 48 hours after creation.
+   - URL is sent only to the provided email address.
+   - After the URL is activated, the expiration time reduces to 1 hour for security.
+
+3. **User File Upload**  
+   - Allows users to upload files up to 1GB.
+   - Displays upload progress, including elapsed and remaining time estimates.
+
+4. **File Storage on NextCloud**  
+   - Uploaded files are stored in a fixed folder within NextCloud storage.
+   - Original filenames are replaced with a new generated name for privacy.
+
+5. **Metadata Generation**  
+   - A `.txt` metadata file is created for each uploaded file.
+   - The metadata file contains the original filename and the sender’s email address.
+
+
+--
+
 
 ## Install
 
@@ -66,7 +94,7 @@ $ cp config/.config.php.default config/.config.php
   }
 ```
 
-## Example
+## Examples:
 
 1. ![Знімок екрана 2024-10-18 013839](https://github.com/user-attachments/assets/88acccde-9687-4562-8e29-6e0e64044be2)
 
